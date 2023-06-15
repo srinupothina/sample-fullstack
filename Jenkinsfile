@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'ca-git-access', branch: 'develop', url: "https://git.cloudavise.com/visops/t059/sample-fullstack-app.git"
+                git credentialsId: 'ca-git-access', branch: 'dev', url: "https://git.cloudavise.com/visops/t059/sample-fullstack-app.git"
             }
         }
 
