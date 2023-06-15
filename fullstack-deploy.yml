@@ -7,24 +7,24 @@
   tasks:
     - name: Copy repository
       copy:
-        src: /opt/jenkins/workspace/VisOps/t057/sample-fullsatck-app/webapplication
+        src: /opt/jenkins/workspace/VisOps/t059/sample-fullstack-app
              
         dest: /home/ubuntu/
 
     - name: script
       shell: chmod +x script.sh
       args:
-        chdir: /home/ubuntu/webapplication/
+        chdir: /home/ubuntu/sample-fullstack-app/
 
     - name: Install Dependencies
       shell: sudo ./script.sh
       args:
-        chdir: /home/ubuntu/webapplication/
+        chdir: /home/ubuntu/sample-fullstack-app/
 
     - name: Build Artifact
       shell: mvn clean package
       args:
-        chdir: /home/ubuntu/webapplication/backend/
+        chdir: /home/ubuntu/sample-fullstack-app/backend/
 
     - name: Sleep for 3 minutes
       pause:
@@ -34,4 +34,4 @@
     - name: Docker Compose Up
       shell: docker-compose up -d
       args:
-        chdir: /home/ubuntu/webapplication/
+        chdir: /home/ubuntu/sample-fullstack-app/
