@@ -4,7 +4,7 @@
 
 [webservers]
 
-fullstack-demo  ansible_host= 52.200.111.140 ansible_port=22     ansible_user=ubuntu     ansible_ssh_private_key_file="/opt/jenkins/workspace/VisOps/t059/sample-fullstack-app/ec2-1.pem"
+fullstack-demo  ansible_host=174.129.139.65 ansible_port=22     ansible_user=ubuntu     ansible_ssh_private_key_file="/opt/jenkins/workspace/VisOps/t059/sample-fullstack-app/ec2-1.pem"
 
 
 
